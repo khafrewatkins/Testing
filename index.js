@@ -42,7 +42,7 @@ const entriesRoutes = require('./routes/entries')
 // replit doesnt use .env. 
 // need .env file in config folder offReplit
 
-// require("dotenv").config({ path: "./config/.env" });
+require("dotenv").config({ path: "./config/.env" });
 
 // get passport config
 require('./config/passport')(passport)

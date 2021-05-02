@@ -4,3 +4,19 @@
 <p>test ejs</p>
 <h2><%= entry.title %></h2>
 <img src="../<%= entry.image%>" />
+<div>
+    <form 
+    action="/post/likeEntry/<%= entry.id %>?_method=PUT" 
+    method="POST">
+        <button type="submit">Like</button>
+    </form>
+    <h3>Likes: <%= entry.likes %></h3>
+    <%if(entry.user == user.id){ %>
+        <form
+          action="/post/deleteEntry/<%= entry.id %>?_method=DELETE"
+          method="POST"
+        >
+          <button type="submit">Delete</button>
+        </form>
+        <%}%>
+</div>
