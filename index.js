@@ -79,7 +79,9 @@ app.use(
 )
 
 // use passport middleware
+// init password authentication
 app.use(passport.initialize());
+// persistent login sessions
 app.use(passport.session());
 
 // use express flash

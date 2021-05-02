@@ -12,7 +12,7 @@ const entriesController = require('../controllers/entries')
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 // will change route to /:id to get specific entry 
-router.get('/entry', entriesController.getEntry)
+router.get('/:id', entriesController.getEntry)
 
 router.post('/createEntry', upload.single('file'), entriesController.createEntry)
 
