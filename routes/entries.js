@@ -19,8 +19,8 @@ router.post('/createEntry', upload.single('file'), entriesController.createEntry
 
 // TODO: /createEntry, /like, /edit, /delete, /createComment?, /editComment?, /deleteComment?
 
-router.put("/likeEntry/:id", entriesController.likeEntry);
+router.put('/likeEntry/:id', entriesController.likeEntry);
 
-router.delete("/deleteEntry/:id", entriesController.deleteEntry);
+router.delete('/deleteEntry/:id', entriesController.deleteEntry);
 
 module.exports = router
