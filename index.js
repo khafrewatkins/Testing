@@ -14,7 +14,7 @@
 // "passport": "^0.4.1",
 // "passport-local": "^1.0.0",
 // "validator": "^13.6.0"
-    
+
 // get all the goodies from express
 const express = require('express')
 const app = express()
@@ -74,7 +74,7 @@ app.use(
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection})
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 )
 
