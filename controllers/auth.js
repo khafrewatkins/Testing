@@ -97,7 +97,7 @@ exports.postLogin = (req, res, next) => {
 
   if (validationErrors.length) {
     req.flash("errors", validationErrors);
-    return res.redirect("/login");
+    return res.redirect("/");
   }
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
@@ -110,7 +110,7 @@ exports.postLogin = (req, res, next) => {
     // if not an user, flash errors and redirect to login page
     if (!user) {
       req.flash("errors", info);
-      return res.redirect("/login");
+      return res.redirect("/");
     }
     // if user exists, flash success message and redirect to user's profile
     req.logIn(user, (err) => {
