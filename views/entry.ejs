@@ -3,7 +3,9 @@
 
 <p>test ejs</p>
 <h2><%= entry.title %></h2>
+<h2><a href="/feed">Back to feed</a></h2>
 <img src="../<%= entry.image%>" />
+<p><%= entry.caption %></p>
 <div>
     <%if(entry.likes.includes(user.id)){%>
       <form action="/entries/unlikeEntry/<%= entry.id %>?_method=PUT" method="POST">
