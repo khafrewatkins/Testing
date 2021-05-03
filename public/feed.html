@@ -13,18 +13,36 @@
     <section class="topnav">
         <!-- Centered link -->
         <div class="topnav-centered">
-            <a href="#home" class="active">Eazy Sneezy Social</a>
+            <h1><a href="#home" class="active">Eazy Sneezy Social</a></h1>
         </div>
         <!-- Right-aligned links -->
         <div class="topnav-right">
             <a href="../views/profile.ejs">Profile</a>
-            <a href="../auth/logout">Logout</a>
+            <a href="../controllers/auth.js">Logout</a>
         </div>
     </section>
 
 
     <section>
+        <div class="feed-container">
+            <ul>
+                <li class="card">
+                    <div class="entry-topper">
+                        <div class="entry-title">
+                            <p>This is a test title</p>
+                        </div>
+                        <div class="entry-author">
+                            <span>Author</span>
+                        </div>
+                    </div>
+                    <a href="/entries/<%= entries[i]._id%>">
+                        <img class="feed-img"
+                            src="https://www.ladbible.com/cdn-cgi/image/width=720,quality=70,format=webp,fit=pad,dpr=2/https%3A%2F%2Fs3-images.ladbible.com%2Fs3%2Fcontent%2F2f6434d75d95d10794c75341bd465f4d.png">
+                    </a>
+                </li>
 
+            </ul>
+        </div>
     </section>
 
 </body>

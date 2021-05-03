@@ -133,6 +133,29 @@ table {
     border-spacing: 0;
 }
 
+/* Base Looks */
+p{
+    font-family: 'Gill Sans',
+    'Gill Sans MT',
+    Calibri,
+    'Trebuchet MS',
+    sans-serif;
+    color: rgba(40, 40, 40, 0.88);
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+span{
+    font-family: 'Gill Sans',
+    'Gill Sans MT',
+    Calibri,
+    'Trebuchet MS',
+    sans-serif;
+    color: rgba(40, 40, 40, 0.88);
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 200;
+}
 /* LOGIN */
 .login-body {
     background: linear-gradient(to bottom, rgba(73, 174, 228, .8), white) no-repeat
@@ -222,8 +245,8 @@ input {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Feed */
-/* Add a black background color to the top navigation */
+/* Site wide navbar */
+/* Add a blue background color to the top navigation */
 .topnav {
     position: relative;
     background-color:rgba(73, 174, 228, .8);
@@ -237,9 +260,13 @@ input {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 18px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+
+.topnav-centered > h1 a{
+    font-size: 2rem;
 }
 
 /* Change the color of links on hover */
@@ -289,6 +316,37 @@ input {
     }
 }
 
+/* Feed */
+.feed-container{
+    padding: 5% 8%;
+}
+
+.feed-container > ul >li{
+    padding: 2% 4%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.feed-container > ul > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 70%;
+}
+
+.feed-img{
+    max-width: 100%;
+}
+
+.entry-topper{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 20px;
+}
 
 /* style button to post a picture */
 
