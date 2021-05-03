@@ -348,6 +348,18 @@ input {
     margin-bottom: 20px;
 }
 
+/* Like button */
+.like-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 70%;
+}
+.fa-heart{
+    color: rgba(213, 8, 8, 0.914);
+    cursor: pointer;
+}
+
 /* style button to post a picture */
 
 /* style button to add picture entry */
