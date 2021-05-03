@@ -46,20 +46,26 @@ module.exports = {
         }
 
   },
-  // likeEntry: async (req, res) => {
-  //   try{
-      
-  //   }
-  // }
-  // addLike: async (req, res) =>{
-  //   try{
-  //       const entry = await Entry.findById(req.params.id)
-  //       entry.likes++
-  //       res.render('entry.ejs', {likes: entry.likes})
-  //   }catch(err){
-  //     console.log(err)
-  //   }
-  // },
-  // deleteEntry:
-  // TODO: likeEntry, deleteEntry
+  likeEntry: async (req, res) => {
+    try{
+      await Entry.findOneAndUpdate({_id:req.params.id},
+        {
+          $inc : {'likes' : 1}
+        },
+      console.log('Liked the entry!'),
+      res.redirect(`/entries/${req.params.id}`)
+      )
+    }catch(err){
+      console.log(err)
+    }
+  },
+  deleteEntry: async (req, res) => {
+        try{
+          await Entry.findOneAndDelete({_id:req.params.id})
+          console.log('Deleted Entry')
+          res.redirect('/profile')
+        }catch(err){
+          res.redirect('/profile')
+        }
+    },
 } 
