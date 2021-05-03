@@ -1,54 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
-<body class="login-body">
-  <main>
-    <div>
-      <h1 class>The Eazy Sneezy Social Network</h1>
-      <h2>Sign Up</h2>
-      <section>
-        <% if (locals.messages.errors) { %>
-          <% messages.errors.forEach( el=> { %>
-            <div>
-              <p>(add error message here if email is already in use, a field is missing (all required), the
-                password is
-                less than 8 characters, or passwords do not match.)</p>
-              <%= el.msg %>
-            </div>
-            <% }) %>
-              <% } %>
-                <% if (locals.messages.info) { %>
-                  <% messages.info.forEach( el=> { %>
-                    <div>
-                      <%= el.msg %>
-                    </div>
-                    <% }) %>
-                      <% } %>
-                        <form class="login-container" action="/signup" method="POST">
-                          <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <!-- require all input fields -->
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                              aria-describedby="emailHelp" name="email" required>
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                            <div>
-                              <label for="userName" class="form-label">User Name</label>
-                              <input type="text" class="form-control" id="userName" name="userName" required>
-                            </div>
-                          </div>
-                          <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="confirmPassword" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
-                              required>
-                          </div>
-                          <button type="submit" class="btn btn-primary ">Sign Up</button>
-                        </form>
-      </section>
-    </div>
-  </main>
+<body>
+
 </body>
+
+</html>
