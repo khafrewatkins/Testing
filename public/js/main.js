@@ -13,8 +13,8 @@ async function addLike() {
       method: "put",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        stageNameS: likedEntry,
-        likes: tLikes,
+        liked: likedEntry,
+        numOfLikes: tLikes,
       }),
     });
     const data = await response.json();
