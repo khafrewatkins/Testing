@@ -5,11 +5,18 @@
 <h2><%= entry.title %></h2>
 <img src="../<%= entry.image%>" />
 <div>
-    <form 
-    action="/entries/likeEntry/<%= entry.id %>?_method=PUT" 
-    method="POST">
-        <button type="submit">Like</button>
-    </form>
+    <%if(entry.likes.includes(user.id)){%>
+      <form action="/entries/unlikeEntry/<%= entry.id %>?_method=PUT" method="POST">
+      <button type="submit">unLike</button>
+      </form>
+    <%} else {%>
+      <form 
+      action="/entries/likeEntry/<%= entry.id %>?_method=PUT" 
+      method="POST">
+          <button type="submit">Like</button>
+      </form>
+    <%} %>
+    
     <h3>Likes: <%= entry.likes.count %></h3>
     <%if(entry.user == user.id){ %>
         <form

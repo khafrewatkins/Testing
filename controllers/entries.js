@@ -61,6 +61,21 @@ module.exports = {
       console.log(err);
     }
   },
+  unlikeEntry: async (req, res) => {
+    try {
+      await Entry.findOneAndUpdate(
+        { _id: req.params.id, likes: ObjectId(req.user.id) },
+        {
+          $inc: { likeCount: -1 },
+          $pull: { likes: ObjectId(req.user.id) },
+        },
+        console.log("unLiked the entry!"),
+        res.redirect(`/entries/${req.params.id}`)
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  },
   deleteEntry: async (req, res) => {
     try {
       await Entry.findOneAndDelete({ _id: req.params.id });

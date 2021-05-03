@@ -23,6 +23,7 @@ router.post(
 // TODO: /createEntry, /like, /edit, /delete, /createComment?, /editComment?, /deleteComment?
 
 router.put("/likeEntry/:id", entriesController.likeEntry);
+router.put("/unlikeEntry/:id", entriesController.unlikeEntry);
 
 router.delete("/deleteEntry/:id", entriesController.deleteEntry);
 
