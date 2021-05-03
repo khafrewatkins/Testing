@@ -1,40 +1,61 @@
-<h1>Feed</h1>
-<h2>will render signup form</h2>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
 
-<p>test ejs</p>
-    <main>
-        <div>
-            <section>
-                <% if (locals.messages.errors) { %>
-                    <% messages.errors.forEach( el => { %>
-                        <div><%= el.msg %></div>
-                    <% }) %>    
-                <% } %>
+<body class="login-body">
+  <main>
+    <header>
+      <h1 class="header">The Eazy Sneezy Social Network</h1>
+      <aside>(add error message here if email is already in use, a field is missing (all required), the password is
+        less than 8 characters, or passwords do not match.)</aside>
+    </header>
+    <div>
+
+      <h2>Sign Up</h2>
+
+
+      <section>
+        <% if (locals.messages.errors) { %>
+          <% messages.errors.forEach( el=> { %>
+            <div>
+              <%= el.msg %>
+            </div>
+            <% }) %>
+              <% } %>
                 <% if (locals.messages.info) { %>
-                    <% messages.info.forEach( el => { %>
-                        <div><%= el.msg %></div>
-                    <% }) %>    
-                <% } %>
-                <form action="/signup" method="POST">
+                  <% messages.info.forEach( el=> { %>
                     <div>
-                        <label for="userName" class="form-label">User Name</label>
-                        <input type="text" class="form-control" id="userName" name="userName">
-                      </div>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <%= el.msg %>
                     </div>
-                    <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
-                      </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-            </section>
-        </div>
-    </main>
+                    <% }) %>
+                      <% } %>
+                        <form class="login-container card" action="/signup" method="POST">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"></label>
+                            <!-- require all input fields -->
+                            <input class="form-control" type="email" name="email" placeholder="Email"
+                              id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                          </div>
+                          <div id="emailsecure" class="form-text">We'll never share your email with anyone else.</div>
+                          <div class="mb-3">
+                            <label for="userName" class="form-label"></label>
+                            <input class="form-control" type="text" id="userName" name="userName" placeholder="Username"
+                              required>
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="password" class="form-label"></label>
+                            <input class="form-control" type="password" id="password" name="password"
+                              placeholder="Password" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="confirmPassword" class="form-label"></label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                              placeholder="Confirm Password" required>
+                          </div>
+                          <button type="submit" class="btn btn-primary ">Sign Up</button>
+                        </form>
+      </section>
+    </div>
+  </main>
+</body>
