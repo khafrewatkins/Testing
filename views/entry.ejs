@@ -10,7 +10,7 @@
     method="POST">
         <button type="submit">Like</button>
     </form>
-    <h3>Likes: <%= entry.likes %></h3>
+    <h3>Likes: <%= entry.likes.count %></h3>
     <%if(entry.user == user.id){ %>
         <form
           action="/entries/deleteEntry/<%= entry.id %>?_method=DELETE"
