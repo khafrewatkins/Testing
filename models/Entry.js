@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const EntrySchema = new mongoose.Schema({
   title: {
@@ -13,10 +13,16 @@ const EntrySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  likes: {
+  likeCount: {
     type: Number,
-    required: true,
+    require: true,
   },
+  likes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
