@@ -38,6 +38,7 @@ module.exports = {
         likeCount: 0,
         likes: [],
         user: req.user.id,
+        author: req.user.userName,
       });
       console.log("Entry has been added!");
       res.redirect("/profile");
