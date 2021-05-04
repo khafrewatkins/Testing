@@ -1,14 +1,27 @@
-<h1>Profile</h1>
-<h2>will render a specific user's profile</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Document</title>
 
-<h2>test ejs</h2>
-<div>
-  <p><strong>User Name</strong>: <%= user.userName %></p>
-  <p><strong>Email</strong>: <%= user.email %></p>
+</head>
+
+
+<body class="profile-body">
+
   <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-</div>
+
+<h1 class="login-container card">Profile</h1>
+
+
+
 <div>
-  <a href='/feed'>Go to feed</a>
+  <p id="login" class="login-container card" ><strong>User Name</strong>: <%= user.userName %></p>
+  <p class="login-container card"><strong>Email</strong>: <%= user.email %></p>
+  <p class="login-container card"> <a href='/feed'>Go to feed</a> 
+  </p>
+ 
 </div>
 <form action="entries/createEntry" enctype="multipart/form-data" method="POST">
   <div class="mb-3">
@@ -25,3 +38,4 @@
   </div>
     <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
 </form>
+</body>   
