@@ -23,17 +23,17 @@
     <section>
         <div class="feed-container">
             <ul>
-                <% for(var i=0; i<entries.length; i++) {%>
+                <% for(var i=0; i<entry.length; i++) {%>
                 <li class="card">
                     <div class="entry-topper">
                         <div class="entry-title">
-                            <p><%= entries[i].title%></p>
+                            <p><%= entry[i].title%></p>
                         </div>
                         <div class="entry-author">
-                            <p><%= entries.req.user%></p>
+                            <p><%= entry.req.user%></p>
                         </div>
                     </div>
-                    <img class="feed-img" src="<%= entries[i].image%>">
+                    <img class="feed-img" src="<%= entry[i].image%>">
                     <div>
                         <%if(entry.likes.includes(user.id)){%>
                         <form action="/entries/unlikeEntry/<%= entry.id %>?_method=PUT" method="POST">
