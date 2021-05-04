@@ -33,7 +33,7 @@
                             <p><%= entry.req.user%></p>
                         </div>
                     </div>
-                    <img class="feed-img" src="<%= entry[i].image%>">
+                    <img class="feed-img" src="<%= entry.image%>">
                     <div>
                         <%if(entry.likes.includes(user.id)){%>
                         <form action="/entries/unlikeEntry/<%= entry.id %>?_method=PUT" method="POST">
