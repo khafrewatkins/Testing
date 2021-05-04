@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Sneezy Feed</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -24,43 +16,29 @@
     </section>
     <!--Entries-->
     <section>
-        <div class="feed-container">
-            <ul>
-                <% for(var i=0; i<entry.length; i++) {%>
-                <li class="card">
-                    <div class="entry-topper">
-                        <div class="entry-title">
-                            <p><%= entry[i].title%></p>
-                        </div>
-                        <div class="entry-author">
-                            <p><%= entry.req.user%></p>
-                        </div>
-                    </div>
-                    <img class="feed-img" src="<%= entry.image%>">
-                    <div>
-                        <%if(entry.likes.includes(user.id)){%>
-                        <form action="/entries/unlikeEntry/<%= entry.id %>?_method=PUT" method="POST">
-                            <button type="submit">unLike</button>
-                        </form>
-                        <%} else {%>
-                        <form action="/entries/likeEntry/<%= entry.id %>?_method=PUT" method="POST">
-                            <button type="submit">Like</button>
-                        </form>
-                        <%} %>
+        <h2>
+            <%= entry.title %>
+        </h2>
+        <img src="../<%= entry.image%>" />
+        <div>
+            <%if(entry.likes.includes(user.id)){%>
+                <form action="/entries/unlikeEntry/<%= entry.id %>?_method=PUT" method="POST">
+                    <button type="submit">unLike</button>
+                </form>
+            <%} else {%>
+                <form action="/entries/likeEntry/<%= entry.id %>?_method=PUT" method="POST">
+                    <button type="submit">Like</button>
+                </form>
+            <%} %>
 
-                        <h3>Likes: <%= entry.likeCount %></h3>
-                        <%if(entry.user == user.id){ %>
-                        <form action="/entries/deleteEntry/<%= entry.id %>?_method=DELETE" method="POST">
-                            <button type="submit">Delete</button>
-                        </form>
-                        <%}%>
-                    </div>
-                </li>
-                    <% } %>
-            </ul>
+            <h3>Likes: <%= entry.likeCount %>
+            </h3>
+            <%if(entry.user==user.id){ %>
+                <form action="/entries/deleteEntry/<%= entry.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            <%}%>
         </div>
     </section>
     <h1>HELLO?!</h1>
 </body>
-
-</html>
