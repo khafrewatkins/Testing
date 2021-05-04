@@ -1,0 +1,29 @@
+<h1>Entry</h1>
+<h2>will render a specific entry by its id </h2>
+
+<p>test ejs</p>
+<h2><%= entry.title %></h2>
+<img src="../<%= entry.image%>" />
+<div>
+    <%if(entry.likes.includes(user.id)){%>
+      <form action="/entries/unlikeEntry/<%= entry.id %>?_method=PUT" method="POST">
+      <button type="submit">unLike</button>
+      </form>
+    <%} else {%>
+      <form 
+      action="/entries/likeEntry/<%= entry.id %>?_method=PUT" 
+      method="POST">
+          <button type="submit">Like</button>
+      </form>
+    <%} %>
+    
+    <h3>Likes: <%= entry.likeCount %></h3>
+    <%if(entry.user == user.id){ %>
+        <form
+          action="/entries/deleteEntry/<%= entry.id %>?_method=DELETE"
+          method="POST"
+        >
+          <button type="submit">Delete</button>
+        </form>
+        <%}%>
+</div>

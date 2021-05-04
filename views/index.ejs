@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="login-body">
+    <!--h1 login for the homepage Non logged in users see this by default.  Users who logout get re-reouted to here-->
+    <section class="header">
+        <h1>The Eazy Sneezy Social Network</h1>
+    </section>
+
+
+    <!--Login form-->
+    <section id="login">
+        <div class="login-container card">
+            <form action="/login" method="POST">
+                <div>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="signin-options container">
+                    <div class="signin-container">
+                        <a href="/signup">Sign up</a>
+                    </div>
+                    <div class="button-container login-container">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
