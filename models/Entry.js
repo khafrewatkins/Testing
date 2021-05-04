@@ -1,5 +1,7 @@
+// Enable connection to database
 const mongoose = require("mongoose");
 
+// Template for storing entries in database
 const EntrySchema = new mongoose.Schema({
   title: {
     type: String,
@@ -37,4 +39,5 @@ const EntrySchema = new mongoose.Schema({
   },
 });
 
+// Allow other files to access the Entry schema
 module.exports = mongoose.model("Entry", EntrySchema);

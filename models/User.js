@@ -2,7 +2,7 @@
 const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 
-// Template for storing users and use mongoose
+// Template for storing users in database
 const UserSchema = new mongoose.Schema({
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
