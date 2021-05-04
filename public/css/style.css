@@ -252,7 +252,7 @@ input {
     background-color:rgba(73, 174, 228, .8);
     overflow: hidden;
     width: 100vw;
-    height: 2%;
+    height: 7%;
 }
 
 /* Style the links inside the navigation bar */
@@ -359,6 +359,9 @@ input {
     color: rgba(213, 8, 8, 0.914);
     cursor: pointer;
 }
+
+/* Entry /*
+
 
 /* style button to post a picture */
 
