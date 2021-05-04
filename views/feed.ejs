@@ -1,16 +1,53 @@
-<h1>Feed</h1>
-<h2>will render feed</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>test ejs</p>
-<div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Sneezy Feed</title>
+</head>
+
+<body>
+  <section class="topnav">
+    <!-- Centered link -->
+    <div class="topnav-centered">
+      <h1><a href="/profile" class="active">Eazy Sneezy Social</a></h1>
+    </div>
+    <!-- Right-aligned links -->
+    <div class="topnav-right">
+      <a href="/profile">Profile</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </section>
+  <!--Entries-->
+  <section>
+    <div class="feed-container">
       <ul>
         <% for(var i=0; i<entries.length; i++) {%>
-          <li>
-            <p><%= entries[i].title%></p>
-            <a href="/entries/<%= entries[i]._id%>">
-              <img src="<%= entries[i].image%>">
-            </a>
-          </li>
+        <li class="card">
+          <div class="entry-topper">
+            <div class="entry-title">
+              <p><%= entries[i].title%></p>
+            </div>
+            <div class="entry-author">
+              <p>By: <%= entries[i].author%></p>
+            </div>
+          </div>
+          <a href="/entries/<%= entries[i]._id%>">
+            <img class="feed-img" src="<%= entries[i].image%>">
+          </a>
+          <div>
+            <span class="fa fa-heart"></span>
+            <span><%= entries[i].likeCount %></span>
+          </div>
+        </li>
         <% } %>
-        </ul>
+      </ul>
     </div>
+  </section>
+</body>
+
+</html>
