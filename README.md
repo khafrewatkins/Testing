@@ -1,16 +1,21 @@
-# We will make branches with the name of the each different Task to keep track of what we are changing on each branch
-
 # Team Eazy Sneezy Social Media App
 
-Social media platform that allows users to share pictures and follow each other. Instagram clone.
+Social media platform that allows users to share pictures and follow each other. Instagram clone of sorts.
 
-Link: * * * pending * * *
+Link: https://eazy-sneezy-social-media.herokuapp.com/
 
 ## How it's made
 
 Tech used: HTML, CSS, JavaScript, Node.js, Express.js, MongoDB
 
- --- Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write something. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold. ---
+--- Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write something. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold. ---
+**Server**
+
+**Views**
+
+**Model**
+
+**Controllers**
 
 ## Optimizations
 
@@ -18,4 +23,6 @@ Tech used: HTML, CSS, JavaScript, Node.js, Express.js, MongoDB
 
 ## Lessons learned
 
---- No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those whoa this is awesome or fuck yeah I did it! moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing. ---
+**Collaboration** - we worked together as a team to divvy tasks and to check in with each other about our work. We built branches and made PRs, tested and reviewed each other's code, and we learned a lot about how to use Github to track and develop our workflow.
+
+**Version Control** - there were a few times we had to back track to figure out what went wrong. From `git checkout <branch-name>` to `git log` and `git checkout -b <new-branch-name>` to figuring out how to reconsile merge conflicts, we picked up quite a bit along the way.
